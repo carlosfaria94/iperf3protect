@@ -74,7 +74,7 @@ def process(js,csvwriter):
     try:
         # caveat: assumes multiple streams are all from same IP so we take the 1st one
         # todo: handle errors and missing elements
-        ip = (obj["start"]["connected"][0]["remote_host"]).encode('ascii', 'ignore')
+        ip = obj["start"]["connected"][0]["remote_host"]
         local_port = obj["start"]["connected"][0]["local_port"]
         remote_port = obj["start"]["connected"][0]["remote_port"]
 
